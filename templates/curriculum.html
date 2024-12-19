@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Resources</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <script defer src="../static/js/curriculum.js"></script>
+    <style>
+        /* Chatbot Floating Icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000; /* Ensure it stays on top of other elements */
+        }
+  
+        #chatbot-icon img {
+            width: 190%;
+            height: 190%;
+            object-fit: cover;
+        }
+  
+        /* Chatbot iframe container */
+        #chatbot-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 400px;
+            height: 450px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            background-color:black;
+            display: none; /* Initially hidden */
+        }
+  
+        #chatbot-container iframe {
+            width: 100%;
+            height: 90%;
+            border: none;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Curriculum Guidelines</h1>
+            <nav>
+                <ul>
+                    <li><a href="user.html">User Details</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="upload.html">Upload Notes</a></li>
+                    <li><a href="view.html">View Notes</a></li>
+                    <li><a href="doubts.html">Post Doubts</a></li>
+                    <li><a href="curriculum.html">Curriculum Guidelines</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="curriculum">
+        <h1>Curriculum Resources</h1>
+        <p>Select a section below to explore its resources:</p>
+        
+        <!-- Dropdown Box -->
+        <div class="dropdown-container">
+            <label for="curriculum-sections">Choose a Section:</label>
+            <select id="curriculum-sections">
+                <option value="" disabled selected>Select a Section</option>
+                <option value="mathematics">Mathematics</option>
+                <option value="engineering-subjects">Engineering Subjects</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="miscellaneous">Miscellaneous</option>
+            </select>
+        </div>
+
+        <!-- Expandable Content -->
+        <div id="content-container">
+            <div id="mathematics" class="resource-category hidden">
+                <h2>Mathematics</h2>
+                <ul>
+                    <li><a href="https://www.youtube.com/playlist?list=PLU6SqdYcYsfI7Ebw_j-Vy8YKHdbHKP9am" target="blank">Linear Algebra</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLU6SqdYcYsfIWugLkTq1nMoU3rDDx7xpG" target="_blank">Laplace</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLU6SqdYcYsfIJRl8mo2Rv1MpdvmVD0YyI" target="_blank">Calculus</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLT3bOBUU3L9jaRSKz0zDxImbxEPcoEceg" target="_blank">Applied Mathematics</a></li>
+                </ul>
+            </div>
+
+            <div id="engineering-subjects" class="resource-category hidden">
+                <h2>Engineering Subjects</h2>
+                <ul>
+                    <li><a href="https://www.mbit.edu.in/wp-content/uploads/2020/05/FULLBOOKPHYSICS.pdf" target="_blank">Engineering Physics - [Download PDF]</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLAOKTXws9mMBuJLbInoUh98e9m_wGTK7F" target="_blank">Computational Chemistry[Lab Practical]</a></li>
+                    <li><a href="https://youtube.com/playlist?list=PLK-_2p3mS1lNUH3BiXwTcppSsPrMWf2w0&si=zAPSRbjZT2CD2xTv" target="_blank">Electrical and Electrnics Engineering[View Video]-Basics</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p" target="blank">Operating System</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLxCzCOWd7aiGFBD2-2joCpWOLUrDLvVV_" target="blank">Cartoon Networks</a></li>
+                </ul>
+            </div>
+
+            <div id="computer-science" class="resource-category hidden">
+                <h2>Computer Science</h2>
+                <ul>
+                    <li><a href="https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz" target="_blank">Data Structures and Algorithms</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD" target="_blank">Full Stack Web Development</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLjVLYmrlmjGdDps6HAwOOVoAtBPAgIOXL" target="blank">App Development</a></li>
+                    <li>
+                        <h3>Languages</h3>
+                        <ul>
+                            <li><a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agwh1XjRt242xIpHhPT2llg" target="_blank">Python</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agS67Uits0UnJyrYiXhDS6q" target="_blank">Java</a></li>
+                            <li><a href="https://www.youtube.com/playlist?list=PLu0W_9lII9agpFUAlPFe_VNSlXW5uE0YL" target="_blank">C++</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div id="miscellaneous" class="resource-category hidden">
+                <h2>Miscellaneous</h2>
+                <ul>
+                    <li><a href="https://www.youtube.com/playlist?list=PL9RcWoqXmzaLt7FMmdDK8SoM5X63cPytf" target="_blank">Soft Communication Skills</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLOVSdvQtun0r91XZQuqk109Rjx7Dqw6nb" target="_blank">French Languages</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PL8nHpqzOrbFAwDzJPamAjX7UV24a7sfQn" target="_blank">Technical Communication Skills</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;ShareEd.</p>
+    </footer>
+
+    <!-- Chatbot Floating Icon -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <img src="../static/images/icon2.png" alt="Chatbot Icon">
+    </div>
+
+    <!-- Chatbot iframe container -->
+    <div id="chatbot-container">
+        <iframe src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/24/17/20241124170024-JMW06R0Z.json"></iframe>
+    </div>
+
+    <script>
+        // Function to toggle chatbot visibility
+        function toggleChatbot() {
+            const chatbotContainer = document.getElementById('chatbot-container');
+            chatbotContainer.style.display = 
+                chatbotContainer.style.display === 'none' || chatbotContainer.style.display === '' 
+                ? 'block' 
+                : 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,495 @@
+/* General styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #555;
+    line-height: 1.6;
+}
+
+a {
+    color: #0a9396;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    background-color: #005f73;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Navigation bar */
+nav {
+    background-color: #0a9396;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f4f4f9;
+}
+
+/* Flex container for the description section */
+#description {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 0;
+    gap: 0; /* Add some spacing between the logo and the text */
+}
+
+.center-container img {
+    max-width: 100%; /* Adjust the logo size */
+    width: 250%;
+    height: auto;
+    border-radius: 1%; /* Optional: Add rounded corners */
+}
+
+.description-content {
+    max-width: 800px; /* Limit the width of the text section for better readability */
+}
+
+.description-content h5 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #0a9396;
+}
+
+.description-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+/* User Details */
+main div {
+    margin: 15px 0;
+    font-size: 1.2rem;
+}
+
+/* Span elements to highlight user details */
+main span {
+    font-weight: bold;
+}
+
+/* Logout Button */
+#logout {
+    display: block;
+    width: 10%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    background-color: #0a9396;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#logout:hover {
+    background-color: #0a9396;
+}
+
+/* Doubt List */
+h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#doubt-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+#doubt-list li {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#doubt-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+#doubt-list li p {
+    margin-bottom: 10px;
+}
+
+#doubt-list li button {
+    background-color: #0a9396;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#doubt-list li button:hover {
+    background-color: #005f73;
+}
+
+#doubt-list li .answers-section {
+    margin-top: 15px;
+}
+
+#doubt-list li .answer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#doubt-list li .answer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+#doubt-list li .answer strong {
+    color: #005f73;
+}
+
+.submit-answer-btn {
+    background-color: #005f73;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-answer-btn:hover {
+    background-color: #0a9396;
+}
+
+
+#team-section {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    text-align: center;
+    background-color: #0a9396;
+    border-top-left-radius: 2rem;
+    border-top-right-radius:2rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+#team-section h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: black;
+}
+
+/* Flexbox container for team members */
+.team-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 20px; /* Space between boxes */
+    justify-content: center; /* Center the boxes */
+    overflow-x: auto; /* Add horizontal scrolling for overflow */
+    padding-bottom: 10px; /* Add padding to prevent cut-off on scroll */
+}
+
+/* Individual team member boxes */
+.team-member-box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    width: 150px; /* Fixed width for consistency */
+    text-align: left; /* Align content to the left */
+    height: auto; /* Adjust height dynamically based on content */
+}
+
+.team-member-box h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: black;
+}
+
+/* Contact info section for LinkedIn and Gmail logos */
+.contact-info {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px; /* Space between logos */
+    align-items: center;
+}
+
+.contact-info img {
+    width: 25px; /* Adjust the size of the logo */
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-info img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+
+
+
+
+
+
+/* Main content sections */
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 10rem;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: #005f73;
+    margin-top: 0;
+}
+
+/* Buttons */
+button {
+    background-color: #005f73;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0a9396;
+    transform: translateY(-3px);
+}
+
+button.secondary {
+    background-color: #dc3545;
+}
+
+button.secondary:hover {
+    background-color: #b52d3a;
+}
+
+button.success {
+    background-color: #28a745;
+}
+
+button.success:hover {
+    background-color: #218838;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    font-weight: bold;
+    color: #555;
+}
+
+form input,
+form textarea,
+form select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #005f73;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+
+
+/* Search bar */
+.search-container {
+    position: relative;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.8rem 2.5rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: #005f73;
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.search-icon,
+#search-clear-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #aaa;
+}
+
+.search-icon {
+    left: 15px;
+}
+
+#search-clear-button {
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+    color: #aaa;
+}
+
+#search-clear-button:hover {
+    color: #333;
+}
+
+/* Notes list */
+.notes-section {
+    margin-top: 2rem;
+}
+
+.notes-section h2 {
+    font-size: 1.8rem;
+    color: #005f73;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.notes-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.notes-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notes-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.notes-card h3 {
+    color: #005f73;
+    margin-bottom: 0.5rem;
+}
+
+.notes-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Upload Page */
+.main-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-container h2 {
+    text-align: center;
+    color: #005f73;
+    margin-bottom: 1.5rem;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #005f73; /* Use this background color */
+    color: #fff;
+    text-align: center;
+    padding: 0.1rem 0; /* Unified padding */
+    margin-top: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem; /* Add this from the paragraph style */
+}

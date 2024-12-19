@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <style>
+        /* Chatbot Floating Icon */
+        #chatbot-icon {
+            position: fixed;
+            bottom: 2%;
+            right: 2%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            /* Ensure it stays on top of other elements */
+        }
+
+        #chatbot-icon img {
+            width: 190%;
+            height: 190%;
+            object-fit: cover;
+        }
+
+        /* Chatbot iframe container */
+        #chatbot-container {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 400px;
+            height: 450px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            background-color: black;
+            display: none;
+            /* Initially hidden */
+        }
+
+        #chatbot-container iframe {
+            width: 100%;
+            height: 90%;
+            border: none;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Home</h1>
+            <nav>
+                <ul>
+                    <li><a href="user.html">User Details</a></li>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="upload.html">Upload Notes</a></li>
+                    <li><a href="view.html">View Notes</a></li>
+                    <li><a href="doubts.html">Post Doubts</a></li>
+                    <li><a href="curriculum.html">Curriculum Guidelines</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="description">
+            <div class="center-container">
+                <!-- Left-aligned logo -->
+                <img src="../static/images/shared3.jpg" alt="ShareED Logo">
+            </div>
+            <!-- Right-aligned content -->
+            <div class="description-content">
+                <h5>Welcome to ShareED</h5>
+                <p>Welcome to the official academic resource-sharing platform! This website serves as a collaborative
+                    space for students and faculty to share and access academic notes and materials. Whether you're
+                    looking for lecture notes, study guides, or project resources, this platform connects everyone to
+                    foster learning and knowledge-sharing. Join us in creating a repository of valuable academic
+                    content, easily accessible to everyone.</p>
+            </div>
+        </section>
+        <section id="team-section">
+            <h2>About Us</h2>
+            <div class="team-container">
+                <!-- Team Member 1 -->
+                <div class="team-member-box">
+                    <h3>Prachi Singh</h3>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/prachi-singh-5a751428a" target="_blank">
+                            <img src="../static/images/linkedin.png" alt="LinkedIn Logo">
+                        </a>
+                        <a href="mailto:sprachi294@gmail.com">
+                            <img src="../static/images/gmail.png" alt="Gmail Logo">
+                        </a>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="team-member-box">
+                    <h3>Rishika Yadav</h3>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/rishika-yadav-8538872a0/" target="_blank">
+                            <img src="../static/images/linkedin.png" alt="LinkedIn Logo">
+                        </a>
+                        <a href="mailto:rishika.yadav04@gmail.com">
+                            <img src="../static/images/gmail.png" alt="Gmail Logo">
+                        </a>
+                    </div>
+                </div>
+                <!-- TeamMember 3-->
+                <div class="team-member-box">
+                    <h3>Lakshya Sahu</h3>
+                    <div class="contact-info">
+                        <a href="https://www.linkedin.com/in/lakshya-sahu-107366292/" target="_blank">
+                            <img src="../static/images/linkedin.png" alt="LinkedIn Logo">
+                        </a>
+                        <a href="mailto:lakshyasahu31@gmail.com">
+                            <img src="../static/images/gmail.png" alt="Gmail Logo">
+                        </a>
+                    </div>
+                </div>
+                <!-- TeamMember 4-->
+                <div class="team-member-box">
+                    <h3>Antisha Ray</h3>
+                    <div class="contact-info">
+                        <a href="http://www.linkedin.com/in/antisha-ray-1ab6212a1" target="_blank">
+                            <img src="../static/images/linkedin.png" alt="LinkedIn Logo">
+                        </a>
+                        <a href="mailto:antisharay26@gmail.com">
+                            <img src="../static/images/gmail.png" alt="Gmail Logo">
+                        </a>
+                    </div>
+                </div>
+                <!-- TeamMember 5-->
+                <div class="team-member-box">
+                    <h3>Siddhant Bhargava</h3>
+                    <div class="contact-info">
+                        <a href="#" target="_blank">
+                            <img src="../static/images/linkedin.png" alt="LinkedIn Logo">
+                        </a>
+                        <a href="mailto:siddhant3641@gmail.com">
+                            <img src="../static/images/gmail.png" alt="Gmail Logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>   
+    </main>
+    <footer>
+        <p>&copy; ShareEd</p>
+    </footer>
+
+    <!-- Chatbot Floating Icon -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <img src="../static/images/icon2.png" alt="Chatbot Icon">
+    </div>
+
+    <!-- Chatbot iframe container -->
+    <div id="chatbot-container">
+        <iframe
+            src="https://cdn.botpress.cloud/webchat/v2.2/shareable.html?configUrl=https://files.bpcontent.cloud/2024/11/24/17/20241124170024-JMW06R0Z.json"></iframe>
+    </div>
+
+    <script>
+        // Function to toggle chatbot visibility
+        function toggleChatbot() {
+            const chatbotContainer = document.getElementById('chatbot-container');
+            chatbotContainer.style.display =
+                chatbotContainer.style.display === 'none' || chatbotContainer.style.display === ''
+                    ? 'block'
+                    : 'none';
+        }
+    </script>
+</body>
+
+</html>
